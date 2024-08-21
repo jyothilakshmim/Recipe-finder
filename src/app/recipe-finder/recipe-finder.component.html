@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Recipe Finder</h1>
+    <form (ngSubmit)="findRecipes()">
+      <div>
+        <label for="ingredients">Enter Ingredients (comma separated):</label>
+        <input type="text" id="ingredients" [(ngModel)]="ingredients" name="ingredients" required>
+      </div>
+      <button type="submit">Find Recipes</button>
+    </form>
+  
+    @if (recipes.length > 0) {
+        <div>
+            <h2>Recipes:</h2>
+            <ul>
+              @for (recipe of recipes; track recipe.name) {
+                  <li>
+                      <h3>{{recipe.name}}</h3>
+                      <p>{{recipe.description}}</p>
+                    </li>
+              }
+            </ul>
+          </div>
+    }
+  </div>
+  
