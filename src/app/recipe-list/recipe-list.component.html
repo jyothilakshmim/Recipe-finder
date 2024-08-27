@@ -1,0 +1,22 @@
+<div class="container">
+    @if (recipes.length > 0) {
+        <div>
+            <h2>Recipes:</h2>
+           
+                <ul class="recipe-list">
+                    @for (recipe of recipes; track recipe.name) {
+                        <button>
+                        <li class="recipe-item" (click)="selectRecipe(recipe)">
+                            <img [src]="'assets/recipe/'+recipe.image" alt="{{recipe.name}}" style="width: 200px; height: 250px; object-fit: cover;">
+                            <div class="recipe-details">
+                            <h3>{{recipe.name}}</h3>
+                            <p>{{recipe.description}}</p>
+                        </div>
+                          </li>
+                        </button>
+                    }
+                  </ul>
+            
+          </div>
+    }
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <form (ngSubmit)="sendIngredients()">
+        <div>
+            <label for="ingredients">Enter Ingredients (comma separated):</label>
+            <input type="text" id="ingredients" [(ngModel)]="ingredients" name="ingredients" required>
+            <button type="submit">Find Recipes</button>
+         </div>
+     </form>
+</div>
