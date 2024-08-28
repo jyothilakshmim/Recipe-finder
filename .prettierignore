@@ -1,0 +1,8 @@
+angular.json
+package.json
+package-lock.json
+tsconfig.*
+dist
+.vscode
+karma*
+.angular
